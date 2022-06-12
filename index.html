@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>extreme sports</title>
+    <style>
+        header{
+            width:99%;
+            height:100px;
+            border: 0px solid #CCCCCC;
+            margin-top: 10px;
+        }
+        nav{
+            width:100%;
+            height:150px;
+            border: 0px solid orange;
+            margin-top:10px;
+        }
+        aside{
+            width: 30%;
+            height:200px;
+            border: 0px solid blue;
+            margin-left:20px;
+            float:left;
+        }
+        section{
+            width:65%;
+            height:500px;
+            border: 2px solid white;
+            float:left;
+            margin-top: 20px;
+            margin-left:50px;
+            background-size: cover;
+        }
+        .clear{
+            clear: both;
+        }
+        footer{
+            width:99%;
+            height:200px;
+            border: 0px solid purple;
+            margin-top:20px;
+        }
+        #logo{
+            float:left;
+            margin:20px;
+            border-bottom: 3px dotted gray;
+        }
+        #top{
+            float:right;
+            margin-top:20px;
+            margin-right: 30px;
+        }
+        nav{
+            border: 0px solid #cccccc;
+            width:95%;
+            height:80px;
+            margin-top:10px;
+        }
+        nav li{
+            display:inline;
+            margin:50px 60px;
+        }
+        section{
+            float:left;
+            border: 0px solid #cccccc;
+            margin-top:10px;
+            /* background-image:url("./wingsuit.png");
+            background-repeat: no-repeat;
+            background-size: cover;*/
+        }
+        aside{
+            float:left;
+            margin-top:10px;
+            border: 0px solid #cccccc;
+        }
+        aside li{
+            margin-bottom: 50px;
+            margin-left:150px;
+            list-style-type:none;
+            /*border-bottom: 2px dotted gray;*/
+        }
+        footer{
+            border: 0px solid #cccccc;
+            width: 95%;
+            height:100px;
+            margin-top:10px;
+        }
+        .clear{
+            clear:both;
+        }
+        #address{
+            float:left;
+            margin-top:10px;
+            padding-left:10px;
+        }
+        #customer{
+            float: right;
+            margin-top:30px;
+            padding-right:10px;
+        }
+        #page{
+            width: 1400px;
+            margin: auto;
+            border:0px solid #cccccc;
+            /*background-color:rgb(188, 231, 235);*/
+            background-image:url("./sky.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #sidecolor{
+            background-color:rgb(154, 240, 200);
+        }
+        .slider{
+            width: 800px;
+            height: 500px;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden; /* 현재 슬라이드 오른쪽에 위치한 나머지 슬라이드 들이 보이지 않도록 가림 */
+        }
+        .slider input[type=radio]{
+            display: none;
+        }
+        .bullets{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+            z-index: 2;
+        }
+        .bullets label{
+            display: inline-block;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.55);
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+/* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
+        .slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+            background-color: #fff;
+        }
+        .slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+            background-color: #fff;
+        }
+        .slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+            background-color: #fff;
+        }
+        .slider input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
+            background-color: #fff;
+        }
+        ul.imgs{
+            padding: 0;
+            margin: 0;
+            list-style: none;    
+        }
+        ul.imgs li{
+            position: absolute;
+            left: 640px;
+            transition-delay: 1s; /* 새 슬라이드가 이동해 오는 동안 이전 슬라이드 이미지가 배경이 보이도록 지연 */
+            padding: 0;
+            margin: 0;
+        }
+        .slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+            left: 0;
+            transition: 0.5s;
+            z-index:1;
+        }
+        .slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+            left: 0;
+            transition: 0.5s;
+            z-index:1;
+        }
+        .slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+            left: 0;
+            transition: 0.5s;
+            z-index:1;
+        }
+        .slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
+            left: 0;
+            transition: 0.5s;
+            z-index:1;
+        }
+    </style>
+</head>
+<body id="page">
+    <header>
+        <div id="logo">
+            <div >짜릿한 경험을 할 수 있는 스포츠</div>
+        </div>
+        <div id="top">
+            <a href="03.html">로그인</a> | <a href="05.html">회원가입 </a> 
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"> 사이트홈</a></li>
+            <li><a href="01.html">스포츠 소개</a></li>
+            <li><a href="04.html">스포츠 검색</a></li>
+            <li><a href="07.html">질문 작성</a></li>
+            <li><a href="02.html">스포츠 예약/후기</a></li>
+            <li><a href="06.html">회원정보수정</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="slider">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <ul id="imgholder" class="imgs">
+                <li><img src="./wingsuit.png"></li>
+                <li><img src="./wake board01.png"></li>
+                <li><img src="./ski jump01.png"></li>
+                <li><img src="./basejump01.png"></li>
+            </ul>
+            <div class="bullets">
+                <label for="slide1">&nbsp;</label>
+                <label for="slide2">&nbsp;</label>
+                <label for="slide3">&nbsp;</label>
+                <label for="slide4">&nbsp;</label>
+            </div>
+        </div>
+        <!-- <img src="./wingsuit.png" width="950px" style="border:2px solid gold;"> -->
+    </section>
+    <aside>
+        <ul>
+            <li>이색 스포츠 알아보기<br><br>
+                <div class="search">
+                <input type="text" placeholder="원하는 결과 입력 후 enter">
+                </div>
+                <br>
+            </li>
+            <li>
+            <details>
+                <summary>스포츠 활동 전 주의사항</summary>
+                <p style="font-style:italic">1.스포츠 활동 전 안전수칙 읽고 따르기</p>
+                <p style="font-style:italic">2.안전에 유의하기</p>
+                <p style="font-style:italic">3.안전장비 착용 후 즐기기</p>
+                <p style="font-style:italic">4.무리하지 않고 몸 상태 유의하며 즐기기</p>
+            </details>
+            </li>
+        </ul>
+    </aside>
+    
+    <div class="clear"></div>
+    <footer style="margin-top:100px;">
+        <div id="address">
+            대표이사: 송민호 | 사업자 번호 123-45-6789
+        </div>
+        <div id="customer">
+            문의전화: 1588-1234
+        </div>
+    </footer>
+</body>
+</html>

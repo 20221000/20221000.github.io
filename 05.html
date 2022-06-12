@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin-top:75px;
+        }
+        body{
+            background-image:url("./background01.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <table width="40%" align="center">
+        <tr>
+            <td align="center">
+                
+                <table width="100%">
+                    <form action="memberInsert.do" method="post" name="frm">
+                        <table class="table" width="100%">
+                        <tr align="center">
+                            <td colspan="2"><b>회원가입</b></td>
+                        </tr>
+                        </table>
+                        <table class="table2">
+                        <tr>
+                            <td width="35%">아이디</td>
+                            <td width="65%">
+                                <input type="text" name="co_id" size="40" required placeholder="4자리 이상" />*
+                                <input type="hidden" name="reid" size="40" />
+                                <input class="button" type="button" value="중복확인" onclick="idCheck()" />
+                            </td>
+                        </tr>			
+                        <tr>
+                            <td>비밀번호</td>
+                            <td><input type="password" name="co_pwd" size="40" required />*</td>
+                        </tr>			
+                        <tr>
+                            <td>비밀번호 확인</td>
+                            <td><input type="password" name="co_repwd" size="40" required />*</td>
+                        </tr>
+            <!-- 		-----로그인정보-----		 -->
+            
+                        <tr>
+                            <td width="35%">성함</td>
+                            <td width="65%"><input type="text" name="co_name" size="40" required />*</td>
+                        </tr>
+                        <tr>
+                            <td>휴대전화 번호</td>
+                            <td><input type="text" name="co_num" size="40" required />*</td>
+                        </tr>
+                        <tr>
+                            <td>주소지</td>
+                            <td><input type="text" name="co_ceo" size="40" required />*</td>
+                        </tr>
+                        </table>					
+            <!-- 		-----회사정보-----		 -->
+                        <tr>
+                            <td colspan="2" align="center">
+                                <input class="button" type="submit" value="회원가입" onclick="memberinsertCheck()"  />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input class="button" type="reset" value="다시쓰기" />
+                            </td>
+                        </tr>															
+                    </form>
+                </table>
+                
+            </td>
+        </tr>
+    </table>	
+</body>
+</html>

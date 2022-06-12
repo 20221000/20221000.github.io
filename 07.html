@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center{
+            text-align:center;
+        }
+        .headcenter{
+            text-align: center;
+            margin-top:50px;
+            margin-right:800px;
+            margin-left:800px;
+            border:3px solid whitesmoke;
+        }
+        body{
+            background-image:url("./background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        textarea{
+            width: 95%;
+            height: 600px;
+            border: none;
+            resize: none;
+        }
+        table{
+            width:100%;
+            height:800px;
+        }
+        table td{
+            width:0px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="headcenter">
+        질문판
+    </h1>
+    <form method="get" action="./view.html">
+    <table style="border:3px solid white;">
+        <tr>
+            <td class="center"><span style="color:white; font-style:italic;">제목</span></td>
+            <td><input type="text" name="subject" style="width:500px;"></td>
+        </tr>
+        <tr>
+            <td class="center"><span style="color:white; font-style:italic;">이름</span></td>
+            <td><input type="text" name="writer"></td>
+        </tr>
+        <tr>
+            <td class="center"><span style="color:white; font-style:italic;">주제</span></td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td class="center"><span style="color:white; font-style:italic;">내용</span></td>
+            <td>
+                <textarea name="content"></textarea> 
+            </td>
+        </tr>
+    </table>
+    <button type="button" style="margin-top:10px; margin-left:1800px;">글 쓰기</button>
+    <button type="button" style="margin-left:50%;"><a href="index.html">사이트 홈</a></button>
+    </form>
+</body>
+</html>

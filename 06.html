@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:url("./background01.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <table width="600px" name="frm" align="center" style="margin-top:300px;">
+        <tr>
+            <td align="center">
+                
+                <table width="100%" class="table">
+                    <tr align="center">
+                        <td><b>회원정보 수정</b></td>
+                    </tr>
+                </table>
+                    
+                <table class="table2" width="100%">
+                    <form action="memberUpdate.do" method="post" name="frm">
+                        <tr>
+                            <td width="35%">아이디</td>
+                            <td><input type="text" name="co_pwd" size="40" required /></td>
+                        </tr>			
+                        <tr>
+                            <td>비밀번호</td>
+                            <td><input type="password" name="co_pwd" size="40" required /></td>
+                        </tr>			
+                        <tr>
+                            <td>비밀번호 확인</td>
+                            <td><input type="password" name="co_repwd" size="40" required /></td>
+                        </tr>
+                    
+            <!-- 		-----로그인정보-----		 -->
+            
+                        <tr>
+                            <td width="35%">성함</td>
+                            <td width="65%"><input type="text" name="co_name" size="40"  required /></td>
+                        </tr>
+                        <tr>
+                            <td>휴대전화 번호</td>
+                            <td><input type="text" name="co_num" size="40" required /></td>
+                        </tr>
+                        <tr>
+                            <td>주소지</td>
+                            <td><input type="text" name="co_ceo" size="40"  required /></td>
+                        </tr>
+                        </table>				
+                        <table style="margin-top:20px;">
+                        <tr>
+                            <td colspan="2" align="center">
+                                <input class="button" type="submit" value="회원정보 수정" />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input class="button" type="reset" value="다시쓰기" />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input class="button" type="button" value="아이디삭제" onclick="memberDelete()" />								
+                            </td>
+                        </tr>	
+                        </table>
+            <!-- 		-----회사정보-----		 -->
+                        
+                        <input type="hidden" value="${GETMEMBER.getCo_id()}" name="co_id">															
+                    </form>
+                </table>
+                
+            </td>
+        </tr>
+    </table>	
+</body>
+</html>
